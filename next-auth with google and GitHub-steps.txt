@@ -1,0 +1,17 @@
+next-auth with google and GitHub
+
+first install package next-auth
+
+create a folder in app named api/auth/[...nextauth]
+
+inside that create a file named route.ts
+
+in this file create a function of next auth and pass it your options
+
+create a lib file and write your providers in the file and pass them to auth route file 
+
+after that create your ui and call your functions for sign in and sign out
+
+create a session wrapper and wrapper your layout with session wrapper
+
+also pass secret keys to your .env.local file
