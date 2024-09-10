@@ -5,6 +5,8 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 const Dashboard = () => {
   const { data: session } = useSession();
+  console.log(session);
+  
   return (
     <div>
       {session ? (
@@ -22,7 +24,7 @@ const Dashboard = () => {
           <p>{session.user?.email}</p>
           <button
             className="bg-red-600 rounded-md p-2 text-white"
-            onClick={() => signOut({ callbackUrl: "/dashboard" })}
+            onClick={() => signOut({ callbackUrl: "/" })}
           >
             Sign Out
           </button>
